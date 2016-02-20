@@ -1,11 +1,10 @@
-#!/bin/sh
-echo "Hola! This is Rishabh's installation guide to Headlines Software"
-echo "BEWARE : Only Mac Users proceed! No windows Noob!"
-read -p "Press [Enter] key to start installation..."
-if [ ! -f /usr/local/bin/Headlines.jar ]; then
-    echo "Yo"
-    drive download --id 0B2iNVcH1ZKm8b0JfU29BaUQ4QlU
-    sudo mv Headlines.jar /usr/local/bin
-else
-    java -jar /usr/local/bin/Headlines.jar
-fi
+class Headlines < Formula
+  homepage ""
+  url "https://github.com/rishabhkumar/headlines/archive/1.0.4.zip"
+  version "1.0.4"
+  sha256 "1805cdfbd24ccceec7a56713b3a03a40f26f2034797325ffda42355840bb1eb4"
+
+  def install
+  bin.install "headlines"
+  end
+end
